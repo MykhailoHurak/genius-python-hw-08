@@ -19,9 +19,35 @@ class Circle(Shape):
     def __init__(self, radius) -> None:
         self.radius = radius
 
-    def calculate_area(self, radius):
-        square = 3.14 * radius * radius
-        print(f"Square of Circle with radius {radius} is {square}")
+    def calculate_area(self):
+        square = 3.14 * self.radius * self.radius
+        print(f"Square of Circle with radius {self.radius} is {square}")
+
+class Rectangle(Shape):
+
+    def __init__(self, side_a, side_b) -> None:
+        self.side_a = side_a
+        self.side_b = side_b
+
+    def calculate_area(self):
+        square = self.side_a * self.side_b
+        print(f"Square of Rectangle with side_a={self.side_a}, side_b={self.side_b} is {square}")
+
+class Triangle(Shape):
+
+    def __init__(self, side_a, h) -> None:
+        self.side_a = side_a
+        self.h = h
+
+    def calculate_area(self):
+        square = 1/2 * self.side_a * self.h
+        print(f"Square of Triangle with side_a={self.side_a}, high={self.h} is {square}")
 
 circle_01 = Circle(3)
 circle_01.calculate_area()
+
+rectangle_01 = Rectangle(5, 6)
+rectangle_01.calculate_area()
+
+triangle_01 = Triangle(10, 6)
+triangle_01.calculate_area()
